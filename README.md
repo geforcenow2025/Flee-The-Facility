@@ -224,7 +224,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Glare = 1.64
     atmosphere.Haze = 2.46
     atmosphere.Decay = Color3.fromRGB(255, 255, 255)  -- Branco
-    atmosphere.Density = 0.93
+    atmosphere.Density = 0.9
     atmosphere.Offset = 0 end)
 
 Section:NewButton("Fog Preto", "fog preto", function() local lighting = game:GetService("Lighting")
