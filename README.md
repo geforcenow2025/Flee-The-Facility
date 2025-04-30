@@ -163,7 +163,7 @@ Section:NewToggle("FreezePod ESP", "FreezePod ESP", function(state)
                     highlight.Adornee = pod
                     highlight.Parent = pod
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(0, 220, 220) -- Azul claro
+                    highlight.OutlineColor = Color3.fromRGB(0, 170, 170) -- Azul claro
                 end
             end
         end
@@ -195,7 +195,7 @@ Section:NewToggle("Exit Door ESP", "Exit Door ESP", function(state)
                     highlight.Adornee = door
                     highlight.Parent = door
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(255, 255, 0) -- Amarelo
+                    highlight.OutlineColor = Color3.fromRGB(170, 170, 0) -- Amarelo
                 end
             end
         end
@@ -224,7 +224,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Glare = 1.64
     atmosphere.Haze = 2.46
     atmosphere.Decay = Color3.fromRGB(255, 255, 255)  -- Branco
-    atmosphere.Density = 0.9
+    atmosphere.Density = 0.93
     atmosphere.Offset = 0 end)
 
 Section:NewButton("Fog Preto", "fog preto", function() local lighting = game:GetService("Lighting")
