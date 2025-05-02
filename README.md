@@ -124,13 +124,13 @@ Section:NewToggle("Computer ESP", "Computer ESP", function(state)
             highlight.Adornee = Pc
             highlight.Parent = Pc
             highlight.FillTransparency = 1
-            highlight.OutlineColor = Color3.fromRGB(0, 50, 255) -- Azul Escuro
+            highlight.OutlineColor = Color3.fromRGB(0, 0, 130) -- Azul Escuro
         end
 
         local function createComputerESP()
             for _, Pc in pairs(game.Workspace:GetDescendants()) do
                 if Pc.Name == "ComputerTable" then
-                    createHighlight(Pc, Color3.fromRGB(0, 50, 255)) -- Azul Escuro
+                    createHighlight(Pc, Color3.fromRGB(0, 0, 130)) -- Azul Escuro
                 end
             end
         end
