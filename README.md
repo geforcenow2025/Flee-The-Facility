@@ -1,5 +1,5 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
-local Window = Library.CreateLib("Flee The Facility", "Ocean")
+local Window = Library.CreateLib("Flee The Facility", "Midnight")
 
 local Tab = Window:NewTab("Home")
 local Section = Tab:NewSection("Home")
@@ -68,7 +68,7 @@ Section:NewToggle("Player ESP", "Player ESP", function(state)
         local function createPlayerESP(player)
             if player ~= LocalPlayer and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
                 local isBeast = player == BeastPlayer
-                local color = isBeast and Color3.fromRGB(170, 0, 0) or Color3.fromRGB(0, 170, 0) -- Define cor com base no target
+                local color = isBeast and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(0, 255, 0) -- Define cor com base no target
                 createHighlight(player.Character, color)
             end
         end
@@ -124,13 +124,13 @@ Section:NewToggle("Computer ESP", "Computer ESP", function(state)
             highlight.Adornee = Pc
             highlight.Parent = Pc
             highlight.FillTransparency = 1
-            highlight.OutlineColor = Color3.fromRGB(0, 0, 170) -- Azul Escuro
+            highlight.OutlineColor = Color3.fromRGB(0, 120, 255) -- Azul Escuro
         end
 
         local function createComputerESP()
             for _, Pc in pairs(game.Workspace:GetDescendants()) do
                 if Pc.Name == "ComputerTable" then
-                    createHighlight(Pc, Color3.fromRGB(0, 0, 170)) -- Azul Escuro
+                    createHighlight(Pc, Color3.fromRGB(0, 120, 255)) -- Azul Escuro
                 end
             end
         end
@@ -195,7 +195,7 @@ Section:NewToggle("Exit Door ESP", "Exit Door ESP", function(state)
                     highlight.Adornee = door
                     highlight.Parent = door
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(170, 170, 0) -- Amarelo
+                    highlight.OutlineColor = Color3.fromRGB(255, 255, 0) -- Amarelo
                 end
             end
         end
