@@ -195,7 +195,7 @@ Section:NewToggle("Exit Door ESP", "Exit Door ESP", function(state)
                     highlight.Adornee = door
                     highlight.Parent = door
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(255, 255, 0) -- Amarelo
+                    highlight.OutlineColor = Color3.fromRGB(220, 220, 0) -- Amarelo
                 end
             end
         end
