@@ -163,7 +163,7 @@ Section:NewToggle("FreezePod ESP", "FreezePod ESP", function(state)
                     highlight.Adornee = pod
                     highlight.Parent = pod
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(0, 150, 255) -- Azul claro
+                    highlight.OutlineColor = Color3.fromRGB(0, 170, 255) -- Azul claro
                 end
             end
         end
