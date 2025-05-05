@@ -68,7 +68,7 @@ Section:NewToggle("Player ESP", "Player ESP", function(state)
         local function createPlayerESP(player)
             if player ~= LocalPlayer and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
                 local isBeast = player == BeastPlayer
-                local color = isBeast and Color3.fromRGB(170, 0, 0) or Color3.fromRGB(0, 170, 0) -- Define cor com base no target
+                local color = isBeast and Color3.fromRGB(130, 0, 0) or Color3.fromRGB(0, 130, 0) -- Define cor com base no target
                 createHighlight(player.Character, color)
             end
         end
