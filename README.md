@@ -68,7 +68,7 @@ Section:NewToggle("Player ESP", "Player ESP", function(state)
         local function createPlayerESP(player)
             if player ~= LocalPlayer and player.Character and player.Character:FindFirstChildOfClass("Humanoid") then
                 local isBeast = player == BeastPlayer
-                local color = isBeast and Color3.fromRGB(170, 0, 0) or Color3.fromRGB(0, 170, 0) -- Define cor com base no target
+                local color = isBeast and Color3.fromRGB(160, 0, 0) or Color3.fromRGB(0, 160, 0) -- Define cor com base no target
                 createHighlight(player.Character, color)
             end
         end
@@ -195,7 +195,7 @@ Section:NewToggle("Exit Door ESP", "Exit Door ESP", function(state)
                     highlight.Adornee = door
                     highlight.Parent = door
                     highlight.FillTransparency = 1
-                    highlight.OutlineColor = Color3.fromRGB(220, 220, 0) -- Amarelo
+                    highlight.OutlineColor = Color3.fromRGB(200, 200, 0) -- Amarelo
                 end
             end
         end
