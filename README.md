@@ -233,7 +233,29 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
     atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
     atmosphere.Glare = 0
-    atmosphere.Haze = 2.46
+    atmosphere.Haze = 10
     atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
     atmosphere.Density = 0.85
+    atmosphere.Offset = 0 end)
+
+Section:NewButton("Remove Fog (com calibrador)", "remove fog (com calibrador)", function() local lighting = game:GetService("Lighting")
+
+local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
+
+    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Glare = 0
+    atmosphere.Haze = 10
+    atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Density = 0.77
+    atmosphere.Offset = 0 end)
+    
+Section:NewButton("Remove Fog (sem calibrador)", "remove fog (sem calibrador)", function() local lighting = game:GetService("Lighting")
+
+local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
+
+    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Glare = 0
+    atmosphere.Haze = 10
+    atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Density = 0
     atmosphere.Offset = 0 end)
