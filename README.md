@@ -266,15 +266,13 @@ Section:NewButton("Aimbot (Serve para a mira grudar no sobrevivente, para que o 
 
 local Tab = Window:NewTab("Deixar o boneco cinza") local Section = Tab:NewSection("Deixar o boneco cinza")
 
-Section:NewToggle("Deixar o boneco cinza", "Deixar o boneco cinza", function(state)
-    local function criarESP(personagem)
-        local highlight = Instance.new("Highlight")
-        highlight.FillColor = Color3.fromRGB(120, 120, 120) -- Cinza
-        highlight.FillTransparency = 0
-        highlight.OutlineColor = Color3.fromRGB(120, 120, 120) -- Cinza
-        highlight.OutlineTransparency = 1
-        highlight.DepthMode = Enum.HighlightDepthMode.Occluded -- Não mostra os jogadores através das paredes
-        highlight.Parent = personagem
+Section:NewToggle("Deixar o boneco cinza", "Deixar o boneco cinza", function(state) 
+    local function criarESP(personagem) 
+        local highlight = Instance.new("Highlight") 
+        highlight.FillColor = Color3.fromRGB(120, 120, 120) -- Cinza 
+        highlight.FillTransparency = 0 
+        highlight.DepthMode = Enum.HighlightDepthMode.Occluded -- Não mostra os jogadores através das paredes 
+        highlight.Parent = personagem 
     end
 
     for _, player in pairs(game:GetService("Players"):GetPlayers()) do
