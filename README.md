@@ -257,7 +257,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Glare = 0
     atmosphere.Haze = 10
     atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
-    atmosphere.Density = 0.10
+    atmosphere.Density = 0
     atmosphere.Offset = 0 end)
 
 local Tab = Window:NewTab("Aimbot") local Section = Tab:NewSection("Aimbot")
