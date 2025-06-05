@@ -216,7 +216,7 @@ local Section = Tab:NewSection("Fog")
 
 -- Fog/Neblina/Névoa
 
-Section:NewButton("Fog Cinza Escuro (para o mapa aeroport)", "fog cinza escuro (para o mapa aeroport)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Fog Cinza Escuro (para o mapa aeroport)", "fog cinza escuro (Para o mapa aeroport)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -227,7 +227,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.9
     atmosphere.Offset = 0 end)
 
-Section:NewButton("Fog Preto (para todos os mapas)", "fog preto (para todos os mapas)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Fog Preto (Para todos os mapas)", "fog preto (para todos os mapas)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -238,7 +238,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.85
     atmosphere.Offset = 0 end)
 
-Section:NewButton("Remove Fog (precisa de calibrador)", "remove fog (precisa de calibrador)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Remove Fog (Precisa de calibrador)", "remove fog (precisa de calibrador)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -249,16 +249,20 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.77
     atmosphere.Offset = 0 end)
     
-Section:NewButton("Remove Fog (remove a neblina inteira do mapa)", "remove fog (remove a neblina inteira do mapa)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Remove Fog (Remove a neblina inteira do mapa)", "remove fog (remove a neblina inteira do mapa)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
     atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
     atmosphere.Glare = 0
-    atmosphere.Haze = 0
+    atmosphere.Haze = 10
     atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
-    atmosphere.Density = 0
+    atmosphere.Density = 0.10
     atmosphere.Offset = 0 end)
+
+local Tab = Window:NewTab("Aimbot") local Section = Tab:NewSection("Aimbot")
+
+Section:NewButton("Aimbot (Serve para a mira grudar no sobrevivente, para que o sobrevivente não consiga te dar dribles)", "aimbot (serve para a mira grudar no sobrevivente, para que o sobrevivente não consiga te dar dribles)", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))() end)
 
 local Tab = Window:NewTab("Deixar o boneco cinza") local Section = Tab:NewSection("Deixar o boneco cinza")
 
