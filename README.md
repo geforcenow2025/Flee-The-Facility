@@ -216,7 +216,7 @@ local Section = Tab:NewSection("Fog")
 
 -- Fog/Neblina/Névoa
 
-Section:NewButton("Fog Cinza Escuro", "fog cinza escuro", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Fog Cinza Escuro (para o mapa aeroport)", "fog cinza escuro (para o mapa aeroport)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -227,7 +227,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.9
     atmosphere.Offset = 0 end)
 
-Section:NewButton("Fog Preto", "fog preto", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Fog Preto (para todos os mapas)", "fog preto (para todos os mapas)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -238,7 +238,7 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.85
     atmosphere.Offset = 0 end)
 
-Section:NewButton("Remove Fog (com calibrador)", "remove fog (com calibrador)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Remove Fog (precisa de calibrador)", "remove fog (precisa de calibrador)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
@@ -249,13 +249,13 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
     atmosphere.Density = 0.77
     atmosphere.Offset = 0 end)
     
-Section:NewButton("Remove Fog (sem calibrador)", "remove fog (sem calibrador)", function() local lighting = game:GetService("Lighting")
+Section:NewButton("Remove Fog (remove a neblina inteira do mapa)", "remove fog (remove a neblina inteira do mapa)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
     atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
     atmosphere.Glare = 0
-    atmosphere.Haze = 10
+    atmosphere.Haze = 0
     atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
     atmosphere.Density = 0
     atmosphere.Offset = 0 end)
