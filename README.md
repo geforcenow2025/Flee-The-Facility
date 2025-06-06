@@ -262,17 +262,19 @@ local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
 local Tab = Window:NewTab("Aimbot") local Section = Tab:NewSection("Aimbot")
 
-Section:NewButton("Aimbot (Serve para a mira grudar no sobrevivente, para que o sobrevivente não consiga te dar dribles)", "aimbot (serve para a mira grudar no sobrevivente, para que o sobrevivente não consiga te dar dribles)", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))() end)
+Section:NewButton("Aimbot (Serve para a mira grudar no sobrevivente)", "aimbot (serve para a mira grudar no sobrevivente)", function() loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Camlock-mobile-da-hood-20401"))() end)
 
-local Tab = Window:NewTab("Deixar o boneco cinza") local Section = Tab:NewSection("Deixar o boneco cinza")
+local Tab = Window:NewTab("Boneco cinza") local Section = Tab:NewSection("Boneco cinza")
 
-Section:NewToggle("Deixar o boneco cinza", "Deixar o boneco cinza", function(state) 
-    local function criarESP(personagem) 
-        local highlight = Instance.new("Highlight") 
-        highlight.FillColor = Color3.fromRGB(120, 120, 120) -- Cinza 
-        highlight.FillTransparency = 0 
-        highlight.DepthMode = Enum.HighlightDepthMode.Occluded -- Não mostra os jogadores através das paredes 
-        highlight.Parent = personagem 
+Section:NewToggle("Boneco cinza", "Boneco cinza", function(state)
+    local function criarESP(personagem)
+        local highlight = Instance.new("Highlight")
+        highlight.FillColor = Color3.fromRGB(120, 120, 120)
+        highlight.FillTransparency = 0
+        highlight.OutlineColor = Color3.fromRGB(120, 120, 120)
+        highlight.OutlineTransparency = 1
+        highlight.DepthMode = Enum.HighlightDepthMode.Occluded -- Não mostra os jogadores através das paredes
+        highlight.Parent = personagem
     end
 
     for _, player in pairs(game:GetService("Players"):GetPlayers()) do
