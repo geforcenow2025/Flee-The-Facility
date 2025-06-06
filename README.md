@@ -220,45 +220,81 @@ Section:NewButton("Fog Cinza Escuro (para o mapa aeroport)", "fog cinza escuro (
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
-    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+if atmosphere then
+    atmosphere.Color = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Glare = 1.64
     atmosphere.Haze = 2.46
-    atmosphere.Decay = Color3.fromRGB(255, 255, 255)  -- Branco
+    atmosphere.Decay = Color3.fromRGB(255, 255, 255) -- Branco
     atmosphere.Density = 0.9
-    atmosphere.Offset = 0 end)
+    atmosphere.Offset = 0
+end
+
+local sky = lighting:FindFirstChildOfClass("Sky")
+
+if sky then
+    sky.MoonAngularSize = 0
+    sky.StarCount = 0
+end end)
 
 Section:NewButton("Fog Preto (Para todos os mapas)", "fog preto (para todos os mapas)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
-    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+if atmosphere then
+    atmosphere.Color = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Glare = 0
     atmosphere.Haze = 10
-    atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Decay = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Density = 0.85
-    atmosphere.Offset = 0 end)
+    atmosphere.Offset = 0
+end
+
+local sky = lighting:FindFirstChildOfClass("Sky")
+
+if sky then
+    sky.MoonAngularSize = 10
+    sky.StarCount = 0
+end end)
 
 Section:NewButton("Remove Fog (Precisa de calibrador)", "remove fog (precisa de calibrador)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
-    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+if atmosphere then
+    atmosphere.Color = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Glare = 0
     atmosphere.Haze = 10
-    atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Decay = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Density = 0.77
-    atmosphere.Offset = 0 end)
+    atmosphere.Offset = 0
+end
+
+local sky = lighting:FindFirstChildOfClass("Sky")
+
+if sky then
+    sky.MoonAngularSize = 10
+    sky.StarCount = 0
+end end)
     
 Section:NewButton("Remove Fog (Remove a neblina inteira do mapa)", "remove fog (remove a neblina inteira do mapa)", function() local lighting = game:GetService("Lighting")
 
 local atmosphere = lighting:FindFirstChildOfClass("Atmosphere")
 
-    atmosphere.Color = Color3.fromRGB(0, 0, 0)  -- Preto
+if atmosphere then
+    atmosphere.Color = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Glare = 0
     atmosphere.Haze = 10
-    atmosphere.Decay = Color3.fromRGB(0, 0, 0)  -- Preto
+    atmosphere.Decay = Color3.fromRGB(0, 0, 0) -- Preto
     atmosphere.Density = 0
-    atmosphere.Offset = 0 end)
+    atmosphere.Offset = 0
+end
+
+local sky = lighting:FindFirstChildOfClass("Sky")
+
+if sky then
+    sky.MoonAngularSize = 10
+    sky.StarCount = 0
+end end)
 
 local Tab = Window:NewTab("Aimbot") local Section = Tab:NewSection("Aimbot")
 
